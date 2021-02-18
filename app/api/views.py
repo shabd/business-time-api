@@ -54,4 +54,17 @@ def get_business_seconds(start_datetime, end_datetime):
 
 
 def business(request, start_time, end_time):
-    pass
+    def business(request, start_time, end_time):
+    try:
+
+        start_time = start_time[11:]
+        str_start_date_time = dateutil.parser.parse(start_time)
+        str_end_time = end_time[9:]
+        str_end_date_time = dateutil.parser.parse(str_end_time)
+        #  pass str_start and str end into get business seconds function
+        business_seconds = get_business_seconds(
+            str_start_date_time, str_end_date_time)
+    except:
+        return("Error , please check url provided")
+
+    return HttpResponse(business_seconds)
