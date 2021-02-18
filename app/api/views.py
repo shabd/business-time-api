@@ -54,7 +54,6 @@ def get_business_seconds(start_datetime, end_datetime):
 
 
 def business(request, start_time, end_time):
-    def business(request, start_time, end_time):
     try:
 
         start_time = start_time[11:]
