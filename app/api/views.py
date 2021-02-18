@@ -51,3 +51,7 @@ def get_business_seconds(start_datetime, end_datetime):
         start_datetime = start_datetime + timedelta(seconds=1)
 
     return business_seconds
+
+
+def business(request, start_time, end_time):
+    pass
